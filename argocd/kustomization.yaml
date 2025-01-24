@@ -6,7 +6,7 @@ resources:
   - operands/operand-project.yaml
   
   - ibm-verify-argo-role.yaml
-  - ibm-verify-rb.yaml
+  - ibm-verify-argo-rb.yaml
 
   - operators/all-operators.yaml
   - operands/all-operands.yaml
