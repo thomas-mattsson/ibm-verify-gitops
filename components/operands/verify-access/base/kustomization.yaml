@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - verify-access.yaml
   - service.yaml
-  
+  - route.yaml
