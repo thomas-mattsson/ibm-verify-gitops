@@ -7,7 +7,6 @@ spec:
   - list:
       elements:
         - name: verify-access
-          namespace: openshift-operators
   template:
     metadata:
       name: '{{name}}-operator'
@@ -21,7 +20,7 @@ spec:
         path: 'components/operators/{{name}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{namespace}}'
+        namespace: ibm-verify
       syncPolicy:
         automated:
           selfHeal: true
