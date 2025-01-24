@@ -19,7 +19,7 @@ spec:
     spec:
       project: ibm-verify-operands
       source:
-        path: 'components/operands/{{name}}/'
+        path: 'components/operands/{{name}}/base'
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{namespace}}'
