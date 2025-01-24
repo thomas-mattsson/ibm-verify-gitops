@@ -5,11 +5,11 @@ resources:
   - operators/operator-project.yaml
   - operands/operand-project.yaml
   
-  - ibm-verify-argo-role.yaml
-  - ibm-verify-rb.yaml
+  #- ibm-verify-argo-role.yaml
+  #- ibm-verify-rb.yaml
 
   - operators/all-operators.yaml
-  - operands/all-operands.yaml
+  #- operands/all-operands.yaml
  
 patches:
 - target:
