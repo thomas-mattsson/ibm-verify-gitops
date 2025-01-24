@@ -6,7 +6,7 @@ spec:
   generators:
   - list:
       elements:
-        - name: ibm-verify-access
+        - name: verify-access
           namespace: openshift-operators
   template:
     metadata:
