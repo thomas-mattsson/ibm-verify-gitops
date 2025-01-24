@@ -9,7 +9,7 @@ resources:
   #- ibm-verify-rb.yaml
 
   - operators/all-operators.yaml
-  #- operands/all-operands.yaml
+  - operands/all-operands.yaml
  
 patches:
 - target:
