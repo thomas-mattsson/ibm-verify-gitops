@@ -8,6 +8,8 @@ resources:
   - ibm-verify-argo-role.yaml
   - ibm-verify-argo-rb.yaml
 
+  - ../components/common/base
+
   - operators/all-operators.yaml
   - operands/all-operands.yaml
  
