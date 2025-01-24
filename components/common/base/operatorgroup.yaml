@@ -3,6 +3,4 @@ kind: OperatorGroup
 metadata:
   name: ibm-verify
   namespace: ibm-verify
-spec:
-  targetNamespaces:
-    - ibm-verify
+spec: {}
