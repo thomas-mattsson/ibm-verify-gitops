@@ -64,9 +64,9 @@ spec:
   # of using licence codes for WebSEAL, Advanced Access Cotnrol, Federation or Enterprise; as well as production
   # or non-production (development) licenses. The actual license codes you should deploy will depend on your 
   # licensing agreement with IBM.
-  ilmtAnnotations:
-    module: webseal
-    production: false
+  #ilmtAnnotations:
+  #  module: webseal
+  #  production: false
 
   # Administarators can optionally set additional annotations to add to deployed Verify Identity Access runtime
   # containers. This may be used for integration with third party applications such as log aggregation 
