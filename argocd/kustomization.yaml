@@ -12,6 +12,8 @@ resources:
 
   - operators/all-operators.yaml
   - operands/all-operands.yaml
+
+  - demo.yaml
  
 patches:
 - target:
