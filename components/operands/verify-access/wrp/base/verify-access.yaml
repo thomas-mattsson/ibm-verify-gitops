@@ -3,7 +3,7 @@ kind: IBMSecurityVerifyAccess
 
 metadata:
   # The name which will be give to the deployment.
-  name: ivia
+  name: ivia-wrp
 
 spec:
   # The name of the image which will be used in the deployment.
