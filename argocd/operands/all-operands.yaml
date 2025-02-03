@@ -6,7 +6,10 @@ spec:
   generators:
   - list:
       elements:
-        - name: verify-access
+        - name: verify-access/config
+          namespace: ibm-verify
+          sync-wave: "200"
+        - name: verify-access/wrp
           namespace: ibm-verify
           sync-wave: "200"
   template:
