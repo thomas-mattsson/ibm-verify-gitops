@@ -106,4 +106,4 @@ spec:
       - name: VIRTUAL_PROTO
         value: https
       - name: VIRTUAL_PORT
-        value: 9443 
+        value: '9443'
