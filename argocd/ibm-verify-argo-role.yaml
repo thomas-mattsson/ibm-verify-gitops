@@ -9,3 +9,16 @@ rules:
       - ibm.com
     resources:
       - ibmsecurityverifyaccesses
+  - verbs:
+      - '*'
+    apiGroups:
+      - ''
+    resources:
+      - services
+  - verbs:
+      - '*'
+    apiGroups:
+      - route.openshift.io
+    resources:
+      - routes
+      
