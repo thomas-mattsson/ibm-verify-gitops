@@ -21,4 +21,10 @@ rules:
       - route.openshift.io
     resources:
       - routes
+  - verbs:
+      - '*'
+    apiGroups:
+      - apps
+    resources:
+      - deployments
       
