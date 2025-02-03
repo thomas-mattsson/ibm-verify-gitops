@@ -101,7 +101,9 @@ spec:
   #
   # More info can be found at:
   #   https://kubernetes.io/docs/tasks/configure-pod-container
-  #container:
-  #  env:
-  #    - name: TEST_ENV
-  #      value: TEST_ENV_VALUE
+  container:
+    env:
+      - name: VIRTUAL_PROTO
+        value: https
+      - name: VIRTUAL_PORT
+        value: 9443 
