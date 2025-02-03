@@ -6,10 +6,10 @@ spec:
   generators:
   - list:
       elements:
-        - name: verify-access/config
+        - name: config
           namespace: ibm-verify
           sync-wave: "200"
-        - name: verify-access/wrp
+        - name: wrp
           namespace: ibm-verify
           sync-wave: "200"
   template:
@@ -22,7 +22,7 @@ spec:
     spec:
       project: ibm-verify-operands
       source:
-        path: 'components/operands/{{name}}/base'
+        path: 'components/operands/verify-access/{{name}}/base'
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{namespace}}'
