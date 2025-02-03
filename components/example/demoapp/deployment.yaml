@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: icr.io/ibmappgateway/ibm-application-gateway-demo-resourceserver:23.04
+          image: icr.io/ibmappgateway/ibm-application-gateway-demo-resource-server:23.04
           ports:
             - name: http
               containerPort: 8080
