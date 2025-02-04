@@ -105,3 +105,5 @@ spec:
     env:
       - name: ADMIN_PWD
         value: admin
+      - name: ADMIN_PWD_MODE
+        value: FIXED
