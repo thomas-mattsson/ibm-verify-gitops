@@ -103,7 +103,5 @@ spec:
   #   https://kubernetes.io/docs/tasks/configure-pod-container
   container:
     env:
-      - name: ADMIN_PWD
-        value: admin
-      - name: ADMIN_PWD_MODE
-        value: FIXED
+      - name: DEBUG
+        value: 'true'
