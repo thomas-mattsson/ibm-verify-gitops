@@ -51,7 +51,7 @@ spec:
   #   - name:my-secret
 
   # The name of the ServiceAccount to use to run the managed pod.
-  serviceAccountName: anyuid
+  serviceAccountName: ivia-anyuid
 
   # The X509 certificate to verify the connection to the configuration snapshot
   # service. The default value for this property is "operator", which reads the "tls.cert"
