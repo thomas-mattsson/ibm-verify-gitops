@@ -102,10 +102,10 @@ spec:
   # More info can be found at:
   #   https://kubernetes.io/docs/tasks/configure-pod-container
   container:
-    ports:
-      - containerPort: 9443
-        name: https
-        protocol: TCP
-      - containerPort: 9080
-        name: http
-        protocol: TCP
+    env:
+      - name: VIRTUAL_HOST
+        value: ivia-config
+      - name: VIRTUAL_PROTO
+        value: https
+      - name: VIRTUAL_PORT
+        value: '9443'
