@@ -58,7 +58,7 @@ spec:
   # service. The default value for this property is "operator", which reads the "tls.cert"
   # value from the verify-access-operator secret created in the namespace that the Verify Identity 
   # Access pods are deployed to.
-  #snapshotTLSCacert: "operator"
+  snapshotTLSCacert: "test"
 
   # The IBM License Metric Tool annotations to add to the runtime container. These annotations a required
   # by IBM to track license useage for the IBM Verify Identity Access product. Administartors have the option
