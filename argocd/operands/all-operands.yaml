@@ -6,12 +6,12 @@ spec:
   generators:
   - list:
       elements:
-        #- name: config
-        #  namespace: ibm-verify
-        #  sync-wave: "200"
-        - name: wrp
+        - name: config
           namespace: ibm-verify
           sync-wave: "200"
+        #- name: wrp
+        #  namespace: ibm-verify
+        #  sync-wave: "200"
   template:
     metadata:
       name: '{{name}}'
