@@ -7,4 +7,5 @@ resources:
   - serviceaccount.yaml
   - serviceaccount-role.yaml
   - serviceaccount-rb.yaml
-  - configmap.yaml  
+  - configmap-server-config.yaml
+  - configmap-proxy-config.yaml
