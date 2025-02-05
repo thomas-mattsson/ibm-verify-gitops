@@ -14,6 +14,8 @@ spec:
         app: ivia-runtime-db
     spec:
       serviceAccountName: ivia-anyuid
+      securityContext:
+        fsGroup: 70
       volumes:
         - name: ivia-runtime-db
           persistentVolumeClaim:
@@ -21,8 +23,6 @@ spec:
       containers:
         - name: ivia-runtime-db
           image: icr.io/isva/verify-access-postgresql:10.0.9.0
-          securityContext:
-            fsGroup: 2000
           ports:
             - containerPort: 5432
               name: postgresql
