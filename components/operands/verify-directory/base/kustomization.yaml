@@ -9,3 +9,4 @@ resources:
   - serviceaccount-rb.yaml
   - configmap-server-config.yaml
   - configmap-proxy-config.yaml
+  - verify-directory.yaml
