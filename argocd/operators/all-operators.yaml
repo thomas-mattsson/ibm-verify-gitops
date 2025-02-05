@@ -7,6 +7,7 @@ spec:
   - list:
       elements:
         - name: verify-access
+        - name: verify-directory
   template:
     metadata:
       name: '{{name}}-operator'
@@ -17,7 +18,7 @@ spec:
     spec:
       project: ibm-verify-operators
       source:
-        path: 'components/operators/{{name}}'
+        path: 'components/operators/{{name}}/base'
       destination:
         server: https://kubernetes.default.svc
         namespace: ibm-verify
