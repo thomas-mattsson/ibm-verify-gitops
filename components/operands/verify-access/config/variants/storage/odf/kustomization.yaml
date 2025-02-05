@@ -3,5 +3,5 @@ kind: Component
 
 patches:
   - target:
-      kind: PersistantVolumeClaim
+      kind: PersistentVolumeClaim
     path: pvc-storage-class.yaml
