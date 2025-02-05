@@ -6,6 +6,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   volumeMode: Filesystem
+  storageClassName: PATCHED_BY_KUSTOMIZE
   resources:
     requests:
       storage: 2Gi
