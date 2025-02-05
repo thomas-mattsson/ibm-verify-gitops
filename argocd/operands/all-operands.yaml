@@ -7,11 +7,14 @@ spec:
   - list:
       elements:
         - name: config
-          namespace: ibm-verify
+          product: verify-access
           sync-wave: "200"
         #- name: wrp
-        #  namespace: ibm-verify
+        #  product: verify-access
         #  sync-wave: "200"
+        - name: directory
+          product: verify-directory
+          sync-wave: "200"
   template:
     metadata:
       name: '{{name}}'
@@ -22,10 +25,10 @@ spec:
     spec:
       project: ibm-verify-operands
       source:
-        path: 'env/odf/operands/verify-access/{{name}}'
+        path: 'env/odf/operands/{{product}}/{{name}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{namespace}}'
+        namespace: ibm-verify
       syncPolicy:
         automated:
           selfHeal: true
