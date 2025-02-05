@@ -23,6 +23,7 @@ spec:
           image: icr.io/isva/verify-access-postgresql:10.0.9.0
           ports:
             - containerPort: 5432
+              name: postgresql
           # Environment definition. In a production environment we
           # would not enable UNSECURE mode and the credential information
           # would be stored in a secret
