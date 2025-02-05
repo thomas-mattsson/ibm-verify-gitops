@@ -5,6 +5,4 @@ resources:
   - verify-access.yaml
   - service.yaml
   - route.yaml
-  - serviceaccount.yaml
-  - serviceaccount-rb.yaml
   - pvc.yaml
