@@ -102,10 +102,10 @@ spec:
   #
   # More info can be found at:
   #   https://kubernetes.io/docs/tasks/configure-pod-container
-  #container:
-    #volumeMounts:
-    #  - mountPath: /var/shared
-    #    name: isva-config
+  container:
+    volumeMounts:
+      - mountPath: /var/shared
+        name: isva-config
     #env:
     #  - name: DEBUG
     #    value: 'true'
