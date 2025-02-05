@@ -18,7 +18,7 @@ data:
         key: secret:isvd-secret/license-key
 
       key-stash:
-        “B64:GAAAAHM1Q2lqMCtLYVppZUhOemprZi9XSGc9PthOcHIiXmA9RlB0Rji/nsd3MpTYvRzUn5joE804v57HdzKU2L0c1J+Y6BPNnceUEUr3I0I4v57HdzKU2L0c1J+Y6BPNnceUEUr3I0I/+VsYL0fIEQ==”
+"B64:GAAAAHM1Q2lqMCtLYVppZUhOemprZi9XSGc9PthOcHIiXmA9RlB0Rji/nsd3MpTYvRzUn5joE804v57HdzKU2L0c1J+Y6BPNnceUEUr3I0I4v57HdzKU2L0c1J+Y6BPNnceUEUr3I0I/+VsYL0fIEQ=="
 
       admin:
         dn: cn=root
