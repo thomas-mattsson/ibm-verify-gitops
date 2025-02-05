@@ -22,5 +22,5 @@ spec:
       server:
         name: isvd-server-config
         key: config.yaml
-  
+
     serviceAccountName: isvd
