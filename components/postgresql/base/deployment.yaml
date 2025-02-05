@@ -18,9 +18,9 @@ spec:
         - name: ivia-runtime-db
           persistentVolumeClaim:
             claimName: ivia-runtime-db-pvc
-          containers:
-            - name: ivia-runtime-db
-              image: icr.io/isva/verify-access-postgresql:10.0.9.0
+      containers:
+        - name: ivia-runtime-db
+          image: icr.io/isva/verify-access-postgresql:10.0.9.0
           ports:
             - containerPort: 5432
           # Environment definition. In a production environment we
