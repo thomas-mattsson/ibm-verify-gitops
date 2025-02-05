@@ -22,7 +22,7 @@ spec:
     spec:
       project: ibm-verify-operands
       source:
-        path: 'env/odf/operands/verify-access/{{name}}/base'
+        path: 'env/odf/operands/verify-access/{{name}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{namespace}}'
