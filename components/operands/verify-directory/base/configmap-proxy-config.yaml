@@ -28,6 +28,6 @@ data:
 
     keyfile:
       keys:
-        - label: “server-key”
+        - label: server-key
           key: secret:isvd-secret/server_key
   
