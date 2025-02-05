@@ -5,3 +5,6 @@ resources:
   - pvc1.yaml
   - pvc2.yaml
   - serviceaccount.yaml
+  - serviceaccount-role.yaml
+  - serviceaccount-rb.yaml
+  
