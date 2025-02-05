@@ -19,7 +19,6 @@ spec:
       proxy:
         name: isvd-proxy-config
         key: config.yaml
-  
       server:
         name: isvd-server-config
         key: config.yaml
