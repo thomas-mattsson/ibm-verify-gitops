@@ -7,3 +7,4 @@ resources:
   - route.yaml
   - serviceaccount.yaml
   - serviceaccount-rb.yaml
+  - pvc.yaml
