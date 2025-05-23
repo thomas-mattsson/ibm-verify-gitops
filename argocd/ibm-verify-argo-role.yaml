@@ -29,4 +29,10 @@ rules:
       - apps
     resources:
       - deployments
+  - verbs:
+      - '*'
+    apiGroups:
+      - security.openshift.io
+    resources:
+      - securitycontextconstraints
       
