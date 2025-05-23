@@ -32,7 +32,8 @@ spec:
   # The name of the Verify Identity Access instance which is being deployed.  This value
   # is only used for WRP and DSC deployments and is ignored for Runtime
   # deployments.  
-  instance: default
+  #instance: default
+  instance: ivia-config-b66b54454-hl7sj
 
   # The language which will be used for messages which are logged by the
   # deployment.
