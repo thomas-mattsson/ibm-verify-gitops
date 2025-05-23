@@ -9,9 +9,9 @@ spec:
         - name: config
           product: verify-access
           sync-wave: "200"
-        #- name: wrp
-        #  product: verify-access
-        #  sync-wave: "200"
+        - name: wrp
+          product: verify-access
+          sync-wave: "200"
         - name: directory
           product: verify-directory
           sync-wave: "200"
