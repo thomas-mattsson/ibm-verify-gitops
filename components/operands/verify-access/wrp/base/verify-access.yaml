@@ -33,7 +33,7 @@ spec:
   # is only used for WRP and DSC deployments and is ignored for Runtime
   # deployments.  
   #instance: default
-  instance: ivia-config
+  instance: Test
 
   # The language which will be used for messages which are logged by the
   # deployment.
