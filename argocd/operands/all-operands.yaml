@@ -15,6 +15,9 @@ spec:
         - name: runtime
           product: verify-access
           sync-wave: "200"
+        - name: dsc
+          product: verify-access
+          sync-wave: "200"
   template:
     metadata:
       name: '{{name}}'
