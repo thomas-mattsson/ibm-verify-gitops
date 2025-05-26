@@ -12,9 +12,9 @@ spec:
         - name: wrp
           product: verify-access
           sync-wave: "200"
-        #- name: directory
-        #  product: verify-directory
-        #  sync-wave: "200"
+        - name: runtime
+          product: verify-access
+          sync-wave: "200"
   template:
     metadata:
       name: '{{name}}'
