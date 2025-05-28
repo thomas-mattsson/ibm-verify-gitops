@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - runtime.yaml  #Currently not possible to use r/w password and not possible to add PVCs
+  - service.yaml
