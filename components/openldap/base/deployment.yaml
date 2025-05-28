@@ -31,6 +31,8 @@ spec:
       - args:
         - --copy-service
         env:
+        - name: LDAP_ENABLE_PORT_389
+          value: "true"
         - name: LDAP_DOMAIN
           valueFrom:
             secretKeyRef:
