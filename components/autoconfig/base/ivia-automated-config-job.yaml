@@ -1,0 +1,49 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ivia-automated-config-job
+spec:
+  selector: {}
+  backoffLimit: 0
+  template:
+    metadata:
+      name: ivia-automated-config-job
+    spec:
+      serviceAccount: ivia-automated-config-job
+      containers:
+        - name: create-config
+          image: python:3.13
+          command:
+            - bash
+            - -c
+            - |
+              python -m venv /tmp/venv
+              source /tmp/venv/bin/activate 
+              #ln -s pki $HOME/dockershare/composekeys
+              pip install setuptools
+              pip install "cython<3.0.0" wheel
+              pip install "pyyaml==5.4.1" --no-build-isolation
+              pip install ibmvia-autoconf
+              export IVIA_CONFIG_BASE=/tmp/config
+              export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
+              # source env.properties
+              # Accepts licenses, configures SSL databases and runtime environments.
+              python -m ibmvia_autoconf
+              # export IVIA_CONFIG_YAML=webseal_authsvc_login.yaml
+              # Creates a WebSEAL instance and enables AAC authentication.
+              # python -m ibmvia_autoconf
+              #- "while true; do sleep 30; done;"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /tmp/config
+            - name: config-volume
+              mountPath: /tmp/pki/postgresql.pem
+              subPath: postgresql.pem
+            - name: config-volume
+              mountPath: /tmp/pki/openldap.pem
+              subPath: openldap.pem
+      restartPolicy: Never
+      volumes:
+        - name: config-volume
+          configMap:
+            name: automated-config
