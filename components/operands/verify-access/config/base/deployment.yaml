@@ -14,9 +14,15 @@ spec:
       labels:
         app: ivia-config
     spec:
-      serviceAccountName: ivia-anyuid
+      #serviceAccountName: ivia-anyuid
       securityContext:
         fsGroup: 0
+        capabilities:
+          drop: ["ALL"]
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+        seccompProfile:
+          type: RuntimeDefault
       containers:
         - name: ivia-config
           readinessProbe:
