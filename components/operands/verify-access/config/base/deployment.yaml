@@ -21,8 +21,8 @@ spec:
           drop: ["ALL"]
         runAsNonRoot: true
         allowPrivilegeEscalation: false
-        #seccompProfile:
-        #  type: RuntimeDefault
+        seccompProfile:
+          type: RuntimeDefault
       containers:
         - name: ivia-config
           readinessProbe:
