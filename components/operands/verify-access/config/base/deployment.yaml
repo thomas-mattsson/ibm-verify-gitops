@@ -22,7 +22,7 @@ spec:
         runAsNonRoot: true
         allowPrivilegeEscalation: false
         seccompProfile:
-          type: RuntimeDefault
+          type: Localhost
       containers:
         - name: ivia-config
           readinessProbe:
