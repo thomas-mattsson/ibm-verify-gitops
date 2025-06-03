@@ -20,7 +20,7 @@ spec:
         #capabilities:
         #  drop: ["ALL"]
         runAsNonRoot: true
-        #allowPrivilegeEscalation: false
+        allowPrivilegeEscalation: false
         #seccompProfile:
         #  type: RuntimeDefault
       containers:
