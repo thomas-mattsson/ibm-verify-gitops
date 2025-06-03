@@ -16,7 +16,7 @@ spec:
     spec:
       #serviceAccountName: ivia-anyuid
       securityContext:
-        fsGroup: 0
+        #fsGroup: 0
         capabilities:
           drop: ["ALL"]
         runAsNonRoot: true
