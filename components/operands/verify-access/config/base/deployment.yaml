@@ -90,7 +90,6 @@ spec:
               mountPath: /tmp/verify-access-operator.crt
               subPath: tls.cert
           image: 'icr.io/ivia/ivia-config:11.0.0.0'
-      serviceAccount: ivia-anyuid
       volumes:
         - name: ivia-config
           persistentVolumeClaim:
