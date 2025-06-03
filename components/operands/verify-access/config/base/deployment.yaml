@@ -15,11 +15,11 @@ spec:
         app: ivia-config
     spec:
       #serviceAccountName: ivia-anyuid
-      securityContext: {}
+      securityContext:
         #fsGroup: 0
         #capabilities:
         #  drop: ["ALL"]
-        #runAsNonRoot: true
+        runAsNonRoot: true
         #allowPrivilegeEscalation: false
         #seccompProfile:
         #  type: RuntimeDefault
