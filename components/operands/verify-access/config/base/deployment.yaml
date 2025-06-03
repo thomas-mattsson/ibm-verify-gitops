@@ -17,8 +17,8 @@ spec:
       #serviceAccountName: ivia-anyuid
       securityContext:
         #fsGroup: 0
-        #capabilities:
-        #  drop: ["ALL"]
+        capabilities:
+          drop: ["ALL"]
         runAsNonRoot: true
         allowPrivilegeEscalation: false
         #seccompProfile:
