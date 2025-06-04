@@ -14,7 +14,7 @@ spec:
       labels:
         app: ivia-config
     spec:
-      serviceAccountName: ivia-anyuid
+      #serviceAccountName: ivia-anyuid
       securityContext:
         #fsGroup: 0
         capabilities:
