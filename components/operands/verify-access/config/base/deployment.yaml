@@ -59,10 +59,10 @@ spec:
                   optional: false
             - name: CONFIG_SERVICE_TLS_CACERT
               value: operator
-            - name: SNAPSHOT_ID
-              value: published
-            - name: INSTANCE
-              value: default
+            #- name: SNAPSHOT_ID
+            #  value: published
+            #- name: INSTANCE
+            #  value: default
             - name: LANG
               value: en_US.utf8
           ports:
