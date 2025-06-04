@@ -90,8 +90,9 @@ spec:
           image: icr.io/ivia/ivia-config:11.0.0.0_IF1
       volumes:
         - name: ivia-config
-          persistentVolumeClaim:
-            claimName: ivia-config-pvc
+          #persistentVolumeClaim:
+          #  claimName: ivia-config-pvc
+          emptyDir: {}
         - name: verify-access-operator
           secret:
             secretName: verify-access-operator
