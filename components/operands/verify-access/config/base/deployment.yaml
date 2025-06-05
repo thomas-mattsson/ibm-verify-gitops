@@ -24,6 +24,8 @@ spec:
       containers:
         - name: ivia-config
           command:
+            - /bin/bash
+            - '-c'
             - echo "default:x:$(id -u):0:default:/:/sbin/nologin" >> "etc/passwd" && /sbin/bootstrap.sh
           readinessProbe:
             exec:
