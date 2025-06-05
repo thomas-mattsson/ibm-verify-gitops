@@ -98,7 +98,6 @@ spec:
         - name: ivia-config
           persistentVolumeClaim:
             claimName: ivia-config-pvc
-          emptyDir: {}
         - name: verify-access-operator
           secret:
             secretName: verify-access-operator
