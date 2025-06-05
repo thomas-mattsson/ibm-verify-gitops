@@ -63,6 +63,8 @@ spec:
             #  value: published
             #- name: INSTANCE
             #  value: default
+            - name: DEBUG
+              value: TRUE
             - name: LANG
               value: en_US.utf8
           ports:
