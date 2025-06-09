@@ -12,18 +12,18 @@ spec:
       serviceAccount: ivia-automated-config-job
       containers:
         - name: create-config
-          image: python:3.13
+          image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-f2a1735
           command:
             - bash
             - -c
             - |
-              python -m venv /tmp/venv
-              source /tmp/venv/bin/activate 
+              #python -m venv /tmp/venv
+              #source /tmp/venv/bin/activate 
               #ln -s pki $HOME/dockershare/composekeys
-              pip install setuptools
-              pip install "cython<3.0.0" wheel
-              pip install "pyyaml==5.4.1" --no-build-isolation
-              pip install ibmvia-autoconf
+              #pip install setuptools
+              #pip install "cython<3.0.0" wheel
+              #pip install "pyyaml==5.4.1" --no-build-isolation
+              #pip install ibmvia-autoconf
               export IVIA_CONFIG_BASE=/tmp/config
               export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
               # source env.properties

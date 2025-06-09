@@ -6,4 +6,3 @@ RUN pip install "pyyaml==5.4.1" --no-build-isolation
 RUN pip install ibmvia-autoconf
 
 CMD ["/bin/bash"]
-        
