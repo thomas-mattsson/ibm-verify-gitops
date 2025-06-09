@@ -12,6 +12,9 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
+
+  - mapping-rules
+
   - ivia-automated-config-job.yaml
   - ivia-automated-config-job-role.yaml
   - ivia-automated-config-job-rb.yaml

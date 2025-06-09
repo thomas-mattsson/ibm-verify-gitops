@@ -12,6 +12,18 @@ container:
     - name: "cfgsvc"
       operation: "update"
       password: !secret ibm-verify/ivia-secrets:cfgsvc-passwd
+  mapping_rules:
+  #- type: SAML2
+  #  files:
+  # - saml20.js
+  #  - adv_saml20.js
+    - type: InfoMap
+      files:
+        - mapping-rules/rule1.js
+        - mapping-rules/rule2.js
+  #- type: Fido2
+  #  files:
+  #  - mediator.js
   management_authorization:
     authorization_enforcement: True
     roles:
