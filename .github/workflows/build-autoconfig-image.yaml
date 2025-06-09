@@ -33,7 +33,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          file: ./components/autoconfig/Dockerfile
+          file: ./ibm-verify-gitops/components/autoconfig/Dockerfile
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
