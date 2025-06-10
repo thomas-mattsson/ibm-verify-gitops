@@ -19,7 +19,8 @@ spec:
             - |
               ln -s pki $HOME/dockershare/composekeys
               export IVIA_CONFIG_BASE=/tmp/config
-              export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
+              #export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
+              export IVIA_MGMT_BASE_URL=https://ivia-config-ibm-verify.apps.67ed09ced6d44283b3abd409.eu1.techzone.ibm.com
               python -m ibmvia_autoconf
               # export IVIA_CONFIG_YAML=webseal_authsvc_login.yaml
               # Creates a WebSEAL instance and enables AAC authentication.

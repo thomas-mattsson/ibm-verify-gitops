@@ -1,5 +1,4 @@
 container:
-  #accept_eula: true
   k8s_deployments:
     namespace: "ibm-verify"
     runtime: 
