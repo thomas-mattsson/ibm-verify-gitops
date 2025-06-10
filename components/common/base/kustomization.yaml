@@ -6,4 +6,4 @@ resources:
   - operatorgroup.yaml
   - serviceaccount.yaml
   - serviceaccount-rb.yaml
-  - letsencrypt-clusterissuer.yaml
+  #- letsencrypt-clusterissuer.yaml
