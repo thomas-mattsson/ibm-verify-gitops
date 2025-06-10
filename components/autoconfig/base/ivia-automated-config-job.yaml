@@ -24,6 +24,7 @@ spec:
               # export IVIA_CONFIG_YAML=webseal_authsvc_login.yaml
               # Creates a WebSEAL instance and enables AAC authentication.
               # python -m ibmvia_autoconf
+            - "while true; do sleep 30; done;"
           volumeMounts:
             - name: config-volume
               mountPath: /tmp/config
