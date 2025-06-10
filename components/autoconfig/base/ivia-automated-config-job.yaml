@@ -16,15 +16,15 @@ spec:
           command:
             - bash
             - -c
-            #- |
-            #  ln -s pki $HOME/dockershare/composekeys
-            #  export IVIA_CONFIG_BASE=/tmp/config
-            #  export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
-            #  python -m ibmvia_autoconf
+            - |
+              ln -s pki $HOME/dockershare/composekeys
+              export IVIA_CONFIG_BASE=/tmp/config
+              export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
+              python -m ibmvia_autoconf
               # export IVIA_CONFIG_YAML=webseal_authsvc_login.yaml
               # Creates a WebSEAL instance and enables AAC authentication.
               # python -m ibmvia_autoconf
-            - "while true; do sleep 30; done;"
+            #- "while true; do sleep 30; done;"
           volumeMounts:
             - name: config-volume
               mountPath: /tmp/config
@@ -34,11 +34,11 @@ spec:
             - name: config-volume
               mountPath: /tmp/pki/openldap.pem
               subPath: openldap.pem
-            - name: mapping-rules-volume
-              mountPath: /tmp/config/mapping-rules
             - name: sample-certificate-secret-volume
               mountPath: /tmp/pki/tls.crt
               subPath: tls.crt
+            - name: mapping-rules-volume
+              mountPath: /tmp/config/mapping-rules
       restartPolicy: Never
       volumes:
         - name: config-volume
