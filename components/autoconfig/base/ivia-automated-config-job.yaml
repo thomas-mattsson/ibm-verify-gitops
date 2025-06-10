@@ -48,4 +48,5 @@ spec:
           configMap:
             name: mapping-rules
         - name: sample-certificate-secret-volume
-          secretName: sample-certificate-secret
+          secret:
+            secretName: sample-certificate-secret
