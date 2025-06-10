@@ -28,7 +28,7 @@ container:
     signer_certificates:
     - "/tmp/pki/postgresql.pem"
     - "/tmp/pki/openldap.pem"
-    - "tmp/pki/sample-cert/tls.crt"
+    - "/tmp/pki/sample-cert/tls.crt"
   - name: "rt_profile_keys"
     signer_certificates:
     - "/tmp/pki/postgresql.pem"
