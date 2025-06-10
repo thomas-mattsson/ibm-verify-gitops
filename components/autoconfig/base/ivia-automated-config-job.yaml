@@ -38,6 +38,7 @@ spec:
               mountPath: /tmp/config/mapping-rules
             - name: sample-certificate-secret-volume
               mountPath: /tmp/pki/tls.crt
+              subPath: tls.crt
       restartPolicy: Never
       volumes:
         - name: config-volume
