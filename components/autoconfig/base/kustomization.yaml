@@ -14,6 +14,7 @@ generatorOptions:
 resources:
 
   - mapping-rules
+  - tls
 
   - ivia-automated-config-job.yaml
   - ivia-automated-config-job-role.yaml
