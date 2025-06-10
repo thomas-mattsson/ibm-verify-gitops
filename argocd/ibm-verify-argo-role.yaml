@@ -8,8 +8,7 @@ rules:
     apiGroups:
       - ibm.com
     resources:
-      - ibmsecurityverifyaccesses
-      - ibmsecurityverifydirectories
+      - '*'
   - verbs:
       - '*'
     apiGroups:
