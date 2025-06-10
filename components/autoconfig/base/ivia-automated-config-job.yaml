@@ -17,7 +17,7 @@ spec:
             - bash
             - -c
             - |
-              ln -s pki $HOME/dockershare/composekeys
+              #ln -s pki $HOME/dockershare/composekeys
               export IVIA_CONFIG_BASE=/tmp/config
               #export IVIA_MGMT_BASE_URL=https://ivia-config.ibm-verify.svc.cluster.local:9443
               export IVIA_MGMT_BASE_URL=https://ivia-config-ibm-verify.apps.67ed09ced6d44283b3abd409.eu1.techzone.ibm.com

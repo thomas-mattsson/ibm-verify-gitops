@@ -76,17 +76,10 @@ container:
       #key_file: "lmi_trust_store"
     aac_configuration:
       mapping_rules:
-      #- type: SAML2
-      #  files:
-      # - saml20.js
-      #  - adv_saml20.js
       - type: InfoMap
         files:
           - mapping-rules/rule1.js
           - mapping-rules/rule2.js
-  #- type: Fido2
-  #  files:
-  #  - mediator.js
   #    runtime:
   #      hostname: "ivia-runtime.ibm-verify.svc"
   #      port: 9443
