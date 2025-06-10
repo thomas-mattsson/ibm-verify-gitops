@@ -1,6 +1,9 @@
 container:
   k8s_deployments:
     namespace: "ibm-verify"
+    deployments: 
+      - "isamwebseal"
+      - "isamruntime"
     runtime: 
       - "ivia-runtime"
     webseal:
