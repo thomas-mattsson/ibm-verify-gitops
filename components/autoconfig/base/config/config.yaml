@@ -28,10 +28,10 @@ container:
     signer_certificates:
     - "/tmp/pki/postgresql.pem"
     - "/tmp/pki/openldap.pem"
-    - "/tmp/pki/tls.crt"
   - name: "rt_profile_keys"
     signer_certificates:
     - "/tmp/pki/postgresql.pem"
+    - "/tmp/pki/tls.crt"
   cluster:
     runtime_database:
       host: "ivia-runtime-db.ibm-verify.svc.cluster.local"
