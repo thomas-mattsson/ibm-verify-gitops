@@ -38,8 +38,7 @@ container:
       type: "postgresql"
       user: "ivia"
       password: !secret ibm-verify/ivia-secrets:postgres-passwd
-      ssl: True
-      ssl_keystore: "rt_profile_keys"
+      ssl: False
       db_name: "ivia"
   activation: #Activation codes
     webseal: !secret ibm-verify/ivia-secrets:base-code
@@ -54,10 +53,8 @@ webseal:
       port: 389
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-      key_file: "lmi_trust_store"
     clean_ldap: True
     domain: "Default"
     admin_user: !secret ibm-verify/ivia-secrets:sec-user
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
     admin_cert_lifetime: 1460
-    ssl_compliance: "fips"
