@@ -60,6 +60,8 @@ webseal:
     reverse_proxy:
     - name: "default"
       host: "ivia-config.ibm-verify.svc.cluster.local"
+      admin_id: "sec_master"
+      admin_pwd: !secret ibm-verify/ivia-secrets:sec-passwd
       http:
         enabled: "no"
       https:
@@ -68,9 +70,3 @@ webseal:
       ldap:
         ssl_yn: "no"
         port: 389
-      aac_configuration:
-        hostname: "localhost"
-        port: 443
-        runtime:
-          user: sec-master
-          password: !secret ibm-verify/ivia-secrets:sec-passwd
