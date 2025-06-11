@@ -57,3 +57,20 @@ webseal:
     admin_user: !secret ibm-verify/ivia-secrets:sec-user
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
     admin_cert_lifetime: 1460
+    reverse_proxy:
+    - name: "default"
+      host: "ivia-config.ibm-verify.svc.cluster.local"
+      http:
+        enabled: "no"
+      https:
+        enabled: "yes"
+      domain: "Default"
+      ldap:
+        ssl_yn: "no"
+        port: 389
+      aac_configuration:
+        hostname: "localhost"
+        port: 443
+        runtime:
+          user: sec-master
+          password: !secret ibm-verify/isva-secrets:sec-passwd
