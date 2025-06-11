@@ -73,4 +73,4 @@ webseal:
         port: 443
         runtime:
           user: sec-master
-          password: !secret ibm-verify/isva-secrets:sec-passwd
+          password: !secret ibm-verify/ivia-secrets:sec-passwd
