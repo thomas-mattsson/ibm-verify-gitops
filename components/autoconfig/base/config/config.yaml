@@ -69,18 +69,18 @@ webseal:
       ldap:
         ssl_yn: "no"
         port: 389
-      aac_configuration:
-        hostname: "localhost"
-        port: 443
-        runtime:
-          user: !secret ibm-verify/ivia-secrets:rtime-user
-          password: !secret ibm-verify/ivia-secrets:rtime-passwd
-        junction: "/mga"
-        reuse_acls: True
-        reuse_certs: True
-        mapping_rules:
+      #aac_configuration:
+      #  hostname: "localhost"
+      #  port: 443
+      #  runtime:
+      #    user: !secret ibm-verify/ivia-secrets:rtime-user
+      #    password: !secret ibm-verify/ivia-secrets:rtime-passwd
+      #  junction: "/mga"
+      #  reuse_acls: True
+      #  reuse_certs: True
+      #  mapping_rules:
         # Can also use directory, see example here: https://github.com/lachlan-ibm/ibmvia_autoconf/blob/8d4175f6fcf87f1da3710a9c43e80a2299a21def/examples/mmfa_demo/mmfa_config.yaml#L87C5-L87C23
-        - type: InfoMap
-          files:
-            - mapping-rules/rule1.js
-            - mapping-rules/rule2.js
+      #  - type: InfoMap
+      #    files:
+      #      - mapping-rules/rule1.js
+      #      - mapping-rules/rule2.js
