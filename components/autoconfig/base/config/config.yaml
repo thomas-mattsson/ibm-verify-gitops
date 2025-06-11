@@ -47,7 +47,7 @@ container:
 webseal:
   runtime:
     policy_server: "local"
-    user_registry: "local"
+    user_registry: "remote"
     ldap:
       host: "openldap.ibm-verify.svc"
       port: 389
