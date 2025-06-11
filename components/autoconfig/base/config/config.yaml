@@ -47,22 +47,20 @@ container:
 webseal:
   runtime:
     policy_server: "local"
+    admin_user: sec_master
+    #admin_user: !secret ibm-verify/ivia-secrets:sec-user
+    admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
+    admin_cert_lifetime: 1460
+    domain: "Default"
     user_registry: "ldap"
     ldap:
       host: "openldap.ibm-verify.svc"
       port: 389
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-    domain: "Default"
-    #admin_user: !secret ibm-verify/ivia-secrets:sec-user
-    admin_user: sec_master
-    admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
-    admin_cert_lifetime: 1460
   reverse_proxy:
     - name: "default"
       host: "ivia-config.ibm-verify.svc.cluster.local"
-      #admin_id: "sec_master"
-      #admin_pwd: !secret ibm-verify/ivia-secrets:sec-passwd
       http:
         enabled: "no"
       https:
@@ -71,5 +69,3 @@ webseal:
       ldap:
         ssl_yn: "no"
         port: 389
-
-#{"inst_name":"default","description":"","host":"ivia-config.ibm-verify.svc.cluster.local","admin_id":"sec_master","admin_pwd":"passw0rd1","domain":"Default","https_yn":"on"}
