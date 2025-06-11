@@ -75,6 +75,14 @@ webseal:
       port: 389
       #key_file: "lmi_trust_store"
     aac_configuration:
+      hostname: "localhost"
+      port: 443
+      runtime:
+        user: !secret ibm-verify/ivia-secrets:rtime-user
+        password: !secret ibm-verify/ivia-secrets:rtime-passwd
+      junction: "/mga"
+      reuse_acls: True
+      reuse_certs: True
       mapping_rules:
       # Can also use directory, see example here: https://github.com/lachlan-ibm/ibmvia_autoconf/blob/8d4175f6fcf87f1da3710a9c43e80a2299a21def/examples/mmfa_demo/mmfa_config.yaml#L87C5-L87C23
       - type: InfoMap
