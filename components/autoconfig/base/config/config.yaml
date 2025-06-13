@@ -47,6 +47,7 @@ container:
 webseal:
   runtime:
     policy_server: "local"
+    # Policy server admin user account must be named sec_master
     admin_user: sec_master
     #admin_user: !secret ibm-verify/ivia-secrets:sec-user
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
@@ -58,17 +59,18 @@ webseal:
       port: 389
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-  reverse_proxy:
-    - name: "default"
-      host: "ivia-config.ibm-verify.svc.cluster.local"
-      http:
-        enabled: "no"
-      https:
-        enabled: "yes"
-      domain: "Default"
-      ldap:
-        ssl_yn: "no"
-        port: 389
+  #reverse_proxy:
+  #  - name: "default"
+  #    # The host parameter will always be the hostname of the config container in a container deployment
+  #    host: "ivia-config.ibm-verify.svc.cluster.local"
+  #    http:
+  #      enabled: "no"
+  #    https:
+  #      enabled: "yes"
+  #    domain: "Default"
+  #    ldap:
+  #      ssl_yn: "no"
+  #      port: 389
       #aac_configuration:
       #  hostname: "localhost"
       #  port: 443
