@@ -59,30 +59,21 @@ webseal:
       port: 389
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-  #reverse_proxy:
-  #  - name: "default"
-  #    # The host parameter will always be the hostname of the config container in a container deployment
-  #    host: "ivia-config.ibm-verify.svc.cluster.local"
-  #    http:
-  #      enabled: "no"
-  #    https:
-  #      enabled: "yes"
-  #    domain: "Default"
-  #    ldap:
-  #      ssl_yn: "no"
-  #      port: 389
-      #aac_configuration:
-      #  hostname: "localhost"
-      #  port: 443
-      #  runtime:
-      #    user: !secret ibm-verify/ivia-secrets:rtime-user
-      #    password: !secret ibm-verify/ivia-secrets:rtime-passwd
-      #  junction: "/mga"
-      #  reuse_acls: True
-      #  reuse_certs: True
-      #  mapping_rules:
-        # Can also use directory, see example here: https://github.com/lachlan-ibm/ibmvia_autoconf/blob/8d4175f6fcf87f1da3710a9c43e80a2299a21def/examples/mmfa_demo/mmfa_config.yaml#L87C5-L87C23
-      #  - type: InfoMap
-      #    files:
-      #      - mapping-rules/rule1.js
-      #      - mapping-rules/rule2.js
+  reverse_proxy:
+    - name: "default"
+      # The host parameter will always be the hostname of the config container in a container deployment
+      host: "ivia-config.ibm-verify.svc.cluster.local"
+      http:
+        enabled: "no"
+      https:
+        enabled: "yes"
+      domain: "Default"
+      ldap:
+        ssl_yn: "no"
+        port: 389
+      junctions:
+        - junction_point: "/demo"
+          description: "demo junction point"
+          junction_type: "tcp"
+          server_hostname: demo-app.ibm-verify.svc.cluster.local
+          server_port: 443
