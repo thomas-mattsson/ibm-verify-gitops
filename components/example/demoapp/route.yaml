@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: demo-app-route
+  namespace: ibm-verify
+  labels:
+    app.kubernetes.io/instance: demo
+spec:
+  to:
+    kind: Service
+    name: demo-app
+  tls:
+    termination: edge
+  port:
+    targetPort: demo-app
