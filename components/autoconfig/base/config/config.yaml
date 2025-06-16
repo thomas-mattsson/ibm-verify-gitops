@@ -46,7 +46,8 @@ container:
     federation: !secret ibm-verify/ivia-secrets:fed-code
 webseal:
   runtime:
-    # policy_server: "remote"
+    ps_mode: "remote"
+    #policy_server: "remote"
     # Admin user account must be named sec_master
     # admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
@@ -54,11 +55,10 @@ webseal:
     domain: "Default"
     user_registry: "local"
     ldap:
-      #host: "openldap.ibm-verify.svc"
-      host: "localhost"
+      host: "openldap.ibm-verify.svc"
       port: 389
-      dn: "cn=root,secAuthority=Default"
-      #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
+      # cn=root,secAuthority=Default
+      dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
   reverse_proxy:
     - name: "default"
