@@ -46,7 +46,7 @@ container:
     federation: !secret ibm-verify/ivia-secrets:fed-code
 webseal:
   runtime:
-    #ps_mode: "remote"
+    ps_mode: "123"
     # policy_server: "123"
     # Admin user account must be named sec_master
     # admin_user: sec_master
