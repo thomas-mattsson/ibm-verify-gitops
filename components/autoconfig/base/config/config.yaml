@@ -54,6 +54,7 @@ webseal:
     admin_cert_lifetime: 1460
     domain: "Default"
     user_registry: "ldap"
+    policy_server: local
     ldap:
       host: "openldap.ibm-verify.svc"
       port: 389
