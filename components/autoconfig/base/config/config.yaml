@@ -47,7 +47,7 @@ container:
 webseal:
   runtime:
     #ps_mode: "remote"
-    policy_server: "123"
+    # policy_server: "123"
     # Admin user account must be named sec_master
     # admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
