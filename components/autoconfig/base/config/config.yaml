@@ -46,7 +46,7 @@ container:
     federation: !secret ibm-verify/ivia-secrets:fed-code
 webseal:
   runtime:
-    policy_server: "remote"
+    policy_server: "ldap"
     admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
     
