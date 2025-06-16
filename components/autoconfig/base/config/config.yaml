@@ -46,7 +46,7 @@ container:
     federation: !secret ibm-verify/ivia-secrets:fed-code
 webseal:
   runtime:
-    policy_server: "remote"
+    # policy_server: "remote"
     # Admin user account must be named sec_master
     # admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
@@ -58,7 +58,6 @@ webseal:
       port: 389
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-    clean_ldap: True
   reverse_proxy:
     - name: "default"
       # The host parameter will always be the hostname of the config container in a container deployment
