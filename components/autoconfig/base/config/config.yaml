@@ -52,14 +52,14 @@ webseal:
     # admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
     admin_cert_lifetime: 1460
-    domain: "Default"
+    domain: "test1"
     user_registry: "ldap"
     policy_server: local
     ldap:
       host: "openldap.ibm-verify.svc"
       port: 389
-      # cn=root,secAuthority=Default
-      dn: !secret ibm-verify/ivia-secrets:ldap-binddn
+      dn: cn=root,secAuthority=test1
+      #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
   reverse_proxy:
     - name: "default"
@@ -69,7 +69,7 @@ webseal:
         enabled: "no"
       https:
         enabled: "yes"
-      domain: "Default"
+      domain: "test1"
       ldap:
         ssl_yn: "no"
         port: 389
