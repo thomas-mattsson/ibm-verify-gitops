@@ -55,7 +55,7 @@ webseal:
     domain: "Default"
     user_registry: "ldap"
     ldap:
-      host: "openldp.ibm-verify.svc"
+      host: "openldap.ibm-verify.svc"
       port: 389
       # cn=root,secAuthority=Default
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
