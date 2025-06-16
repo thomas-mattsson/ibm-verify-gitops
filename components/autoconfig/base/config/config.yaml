@@ -59,8 +59,9 @@ webseal:
       host: "openldap.ibm-verify.svc"
       port: 389
       dn: cn=root,secAuthority=test1
+      dn_password: admin
       #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
-      dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
+      #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
   reverse_proxy:
     - name: "default"
       # The host parameter will always be the hostname of the config container in a container deployment
