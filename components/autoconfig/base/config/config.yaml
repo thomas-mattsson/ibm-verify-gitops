@@ -85,7 +85,11 @@ webseal:
         resource: "ldap.conf"
         stanza: "ldap"
         entry: "port"
-        value: "6389"
+        value: 6389
+      - operation: "delete"
+        resource: "ldap.conf"
+        stanza: "ldap"
+        entry: "ssl-port"
       #- operation: "add"
       #  id: 3
       #  resource: "ldap.conf"
