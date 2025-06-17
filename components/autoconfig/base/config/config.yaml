@@ -70,6 +70,22 @@ webseal:
       dn_password: passw0rd1
       #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
+    stanza_configuration:
+      - operation: "update"
+        resource: "ldap.conf"
+        stanza: "bind-credentials"
+        entry: "bind-dn"
+        value: "cn=root,secAuthority=Default"
+      - operation: "update"
+        resource: "ldap.conf"
+        stanza: "ldap"
+        entry: "host"
+        value: "localhost"
+      - operation: "update"
+        resource: "ldap.conf"
+        stanza: "ldap"
+        entry: "port"
+        value: "6389"
   reverse_proxy:
     - name: "default"
       # The host parameter will always be the hostname of the config container in a container deployment
