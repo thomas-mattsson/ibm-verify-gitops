@@ -16,7 +16,7 @@ resources:
   - autoconfig.yaml
   - postgresql.yaml
   - openldap.yaml
-  - verify-directory
+  - verify-directory.yaml
   - phpldapadmin.yaml
   - demo.yaml
  
