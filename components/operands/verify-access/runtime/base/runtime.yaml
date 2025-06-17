@@ -103,6 +103,9 @@ spec:
   # More info can be found at:
   #   https://kubernetes.io/docs/tasks/configure-pod-container
   container:
+    resources:
+      limits:
+        memory: 4Gi
     volumeMounts:
       - mountPath: /var/shared
         name: ivia-config
