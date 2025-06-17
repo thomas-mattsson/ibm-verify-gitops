@@ -44,6 +44,11 @@ container:
     webseal: !secret ibm-verify/ivia-secrets:base-code
     access_control: !secret ibm-verify/ivia-secrets:aac-code
     federation: !secret ibm-verify/ivia-secrets:fed-code
+  advanced_tuning_parameters:
+    - name: wga.rte.embedded.ldap.include.in.snapshot
+      value: true
+    - name: wga_rte.embedded.ldap.include.in.snapshot
+      value: true
 webseal:
   runtime:
     # ps_mode: "123"
@@ -52,14 +57,14 @@ webseal:
     # admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
     admin_cert_lifetime: 1460
-    domain: "test2"
+    domain: "Default"
     user_registry: "ldap"
     policy_server: local
     ldap:
       host: "openldap.ibm-verify.svc"
       port: 389
-      dn: cn=root,secAuthority=test2
-      dn_password: passw0rd2
+      dn: cn=root,secAuthority=Default
+      dn_password: passw0rd1
       #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
   reverse_proxy:
@@ -70,7 +75,7 @@ webseal:
         enabled: "no"
       https:
         enabled: "yes"
-      domain: "test2"
+      domain: "Default"
       ldap:
         ssl_yn: "no"
         port: 389
