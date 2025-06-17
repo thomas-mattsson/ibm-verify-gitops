@@ -7,11 +7,11 @@ container:
       - "via-wrpi"
   admin_cfg:
     session_timeout: 720
-  advanced_tuning_parameters:
-    - name: wga_rte.embedded.ldap.include.in.snapshot
-      value: true
-    - name: wga.rte.embedded.ldap.ssl.port
-      value: 637
+#  advanced_tuning_parameters:
+#    - name: wga_rte.embedded.ldap.include.in.snapshot
+#      value: true
+#    - name: wga.rte.embedded.ldap.ssl.port
+#      value: 637
   account_management:
     users:
     - name: "cfgsvc"
@@ -59,11 +59,13 @@ webseal:
     admin_cert_lifetime: 1460
     domain: "Default"
     #ser_registry: "ldap"
-    #user_registry: local
+    user_registry: local
     policy_server: local
     ldap:
-      host: "openldap.ibm-verify.svc"
-      port: 389
+      #host: "openldap.ibm-verify.svc"
+      #port: 389
+      host: localhost
+      port: 6389
       dn: cn=root,secAuthority=Default
       dn_password: passw0rd1
       #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
