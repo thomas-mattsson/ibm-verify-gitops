@@ -71,20 +71,21 @@ webseal:
       #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
     stanza_configuration:
-      - operation: "update"
+      - operation: "add"
+        id: 1
         resource: "ldap.conf"
         stanza: "bind-credentials"
-        entry_id: "bind-dn"
+        entry: "bind-dn"
         value: "cn=root,secAuthority=Default"
       - operation: "update"
         resource: "ldap.conf"
         stanza: "ldap"
-        entry_id: "host"
+        entry: "host"
         value: "localhost"
       - operation: "update"
         resource: "ldap.conf"
         stanza: "ldap"
-        entry_id: "port"
+        entry: "port"
         value: "6389"
   reverse_proxy:
     - name: "default"
