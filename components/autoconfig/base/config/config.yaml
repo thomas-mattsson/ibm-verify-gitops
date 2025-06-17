@@ -81,7 +81,7 @@ webseal:
         stanza: "ldap"
         entry: "host"
         value: "localhost"
-      - operation: "update"
+      - operation: "add"
         resource: "ldap.conf"
         stanza: "ldap"
         entry: "port"
@@ -90,12 +90,6 @@ webseal:
         resource: "ldap.conf"
         stanza: "ldap"
         entry: "ssl-port"
-      #- operation: "add"
-      #  id: 3
-      #  resource: "ldap.conf"
-      #  stanza: "ldap"
-      #  entry: "port"
-      #  value: "6389"
   reverse_proxy:
     - name: "default"
       # The host parameter will always be the hostname of the config container in a container deployment
@@ -107,7 +101,7 @@ webseal:
       domain: "Default"
       ldap:
         ssl_yn: "no"
-        port: 389
+        port: 6389
       junctions:
         - junction_point: "/demo"
           description: "demo junction point"
