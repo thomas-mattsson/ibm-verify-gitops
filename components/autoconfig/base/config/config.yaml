@@ -61,13 +61,13 @@ webseal:
     #ser_registry: "ldap"
     user_registry: local
     policy_server: local
-    ldap:
+    #ldap:
       #host: "openldap.ibm-verify.svc"
       #port: 389
-      host: localhost
-      port: 6389
-      dn: cn=root,secAuthority=Default
-      dn_password: passw0rd1
+    #  host: localhost
+    #  port: 6389
+    #  dn: cn=root,secAuthority=Default
+    #  dn_password: passw0rd1
       #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
     stanza_configuration:
