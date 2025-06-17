@@ -72,17 +72,14 @@ webseal:
       #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
     stanza_configuration:
       - operation: "add"
-        id: 1
         resource: "ldap.conf"
         stanza: "bind-credentials"
         entry: "bind-dn"
         value: "cn=root,secAuthority=Default"
-      - operation: "update"
-        id: "host"
+      - operation: "delete"
         resource: "ldap.conf"
         stanza: "ldap"
         entry: "host"
-        value: "localhost"
       #- operation: "add"
       #  id: 3
       #  resource: "ldap.conf"
