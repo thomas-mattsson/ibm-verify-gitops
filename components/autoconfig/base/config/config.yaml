@@ -77,18 +77,18 @@ webseal:
         stanza: "bind-credentials"
         entry: "bind-dn"
         value: "cn=root,secAuthority=Default"
-      - operation: "add"
-        id: 2
+      - operation: "update"
+        id: "host"
         resource: "ldap.conf"
         stanza: "ldap"
         entry: "host"
         value: "localhost"
-      - operation: "add"
-        id: 3
-        resource: "ldap.conf"
-        stanza: "ldap"
-        entry: "port"
-        value: "6389"
+      #- operation: "add"
+      #  id: 3
+      #  resource: "ldap.conf"
+      #  stanza: "ldap"
+      #  entry: "port"
+      #  value: "6389"
   reverse_proxy:
     - name: "default"
       # The host parameter will always be the hostname of the config container in a container deployment
