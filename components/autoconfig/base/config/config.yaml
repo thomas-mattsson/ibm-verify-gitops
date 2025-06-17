@@ -52,14 +52,16 @@ webseal:
     # admin_user: sec_master
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
     admin_cert_lifetime: 1460
-    domain: "Default"
+    domain: "test2"
     user_registry: "ldap"
+    policy_server: local
     ldap:
       host: "openldap.ibm-verify.svc"
       port: 389
-      # cn=root,secAuthority=Default
-      dn: !secret ibm-verify/ivia-secrets:ldap-binddn
-      dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
+      dn: cn=root,secAuthority=test2
+      dn_password: passw0rd2
+      #dn: !secret ibm-verify/ivia-secrets:ldap-binddn
+      #dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
   reverse_proxy:
     - name: "default"
       # The host parameter will always be the hostname of the config container in a container deployment
@@ -68,7 +70,7 @@ webseal:
         enabled: "no"
       https:
         enabled: "yes"
-      domain: "Default"
+      domain: "test2"
       ldap:
         ssl_yn: "no"
         port: 389
