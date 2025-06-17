@@ -77,13 +77,13 @@ webseal:
         stanza: "bind-credentials"
         entry: "bind-dn"
         value: "cn=root,secAuthority=Default"
-      - operation: "update"
+      - operation: "add"
         id: 2
         resource: "ldap.conf"
         stanza: "ldap"
         entry: "host"
         value: "localhost"
-      - operation: "update"
+      - operation: "add"
         id: 3
         resource: "ldap.conf"
         stanza: "ldap"
