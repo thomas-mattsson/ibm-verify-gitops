@@ -15,7 +15,7 @@ spec:
         app: ivia-config
     spec:
       serviceAccountName: ivia-anyuid
-      serviceAccountName: default
+      #serviceAccountName: default
       securityContext:
         #fsGroup: 0
         runAsNonRoot: true
