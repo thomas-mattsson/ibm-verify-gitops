@@ -99,6 +99,9 @@ webseal:
          enabled: "no"
        https:
          enabled: "yes"
+       ldap:
+         ssl_yn: "no"
+         port: 9389
        domain: "Default"
        junctions:
          - junction_point: "/demo"
