@@ -17,7 +17,7 @@ spec:
       serviceAccountName: ivia-anyuid
       #serviceAccountName: default
       securityContext:
-        #fsGroup: 0
+        fsGroup: 0
         runAsNonRoot: true
         runAsUser: 1000820000
       containers:
