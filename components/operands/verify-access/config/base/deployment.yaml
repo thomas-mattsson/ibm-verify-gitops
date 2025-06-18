@@ -72,6 +72,8 @@ spec:
               value: "TRUE"
             - name: LANG
               value: en_US.utf8
+            - name: CONTAINER_TIMEZONE
+              value: Europe/Stockholm
           ports:
             - name: https
               containerPort: 9443
