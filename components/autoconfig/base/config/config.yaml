@@ -28,14 +28,14 @@ container:
       features:
       - name: "shared_volume"
         access: "w"
-  ssl_certificates:
-  - name: "lmi_trust_store"
-    signer_certificates:
-    - "/tmp/pki/postgresql.pem"
-    - "/tmp/pki/openldap.pem"
-  - name: "rt_profile_keys"
-    signer_certificates:
-    - "/tmp/pki/postgresql.pem"
+  # ssl_certificates:
+  # - name: "lmi_trust_store"
+  #   signer_certificates:
+  #   - "/tmp/pki/postgresql.pem"
+  #   - "/tmp/pki/openldap.pem"
+  # - name: "rt_profile_keys"
+  #   signer_certificates:
+  #   - "/tmp/pki/postgresql.pem"
   cluster:
     runtime_database:
       host: "ivia-runtime-db.ibm-verify.svc.cluster.local"
