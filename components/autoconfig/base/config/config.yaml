@@ -33,7 +33,7 @@ container:
       - "/tmp/pki/postgresql.pem"
     - name: "isvd"
       signer_certificates:
-      - "/tmp/pki/server_cert" 
+      - "/tmp/pki/server_cert/server_cert" 
   cluster:
     runtime_database:
       host: "ivia-runtime-db.ibm-verify.svc.cluster.local"
