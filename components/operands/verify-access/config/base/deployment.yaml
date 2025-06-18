@@ -14,8 +14,8 @@ spec:
       labels:
         app: ivia-config
     spec:
-      serviceAccountName: ivia-anyuid
-      #serviceAccountName: default
+      #serviceAccountName: ivia-anyuid
+      serviceAccountName: default
       securityContext:
         #fsGroup: 0
         runAsNonRoot: true
@@ -24,8 +24,8 @@ spec:
           command:
             - /bin/bash
             - '-c'
-            #- echo "default:x:$(id -u):0:default:/:/sbin/nologin" >> "etc/passwd" && echo "3" > /etc/debug.level && /sbin/bootstrap.sh
-            - echo "3" > /etc/debug.level && /sbin/bootstrap.sh
+            - echo "default:x:$(id -u):0:default:/:/sbin/nologin" >> "etc/passwd" && echo "3" > /etc/debug.level && /sbin/bootstrap.sh
+            #- echo "3" > /etc/debug.level && /sbin/bootstrap.sh
           readinessProbe:
             exec:
               command:
