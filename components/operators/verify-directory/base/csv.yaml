@@ -54,7 +54,7 @@ metadata:
     description: The IBM Security Verify Directory operator is used to scale an IBM Security Verify Directory Server environment.
     olm.operatorGroup: ibm-verify
   name: ibm-security-verify-directory-operator.v23.4.1
-#  namespace: openshift-operator-lifecycle-manager
+  namespace: openshift-operator-lifecycle-manager
   labels:
     olm.copiedFrom: ibm-verify
     olm.managed: 'true'
