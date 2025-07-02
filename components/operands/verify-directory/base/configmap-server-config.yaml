@@ -39,4 +39,6 @@ data:
           object-classes:
             - organization
         - dn: secAuthority=Default
+          object-classes:
+            - organization
             
