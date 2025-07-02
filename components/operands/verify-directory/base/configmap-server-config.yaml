@@ -38,4 +38,5 @@ data:
         - dn: o=sample
           object-classes:
             - organization
+        - dn: secAuthority=Default
             
