@@ -38,7 +38,17 @@ data:
         - dn: o=sample
           object-classes:
             - organization
+        - dn: dc=ibm,dc=com
+          object-classes:
+            - domain
         - dn: secAuthority=Default
           object-classes:
-            - organization
+            - secAuthorityInfo
+            - eApplicationSystem
+            - eSystem
+            - cimLogicalElement
+            - cimManagedSystemElement
+            - cimManagedElement
+          attributes:
+            - "version=6.0"
             
