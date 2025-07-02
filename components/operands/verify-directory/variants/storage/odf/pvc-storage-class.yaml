@@ -3,4 +3,5 @@ kind: PersistentVolumeClaim
 metadata:
   name: ignored
 spec:
-  storageClassName: ocs-external-storagecluster-ceph-rbd
+  #storageClassName: ocs-external-storagecluster-ceph-rbd
+  storageClassName: ocs-storagecluster-ceph-rbd
