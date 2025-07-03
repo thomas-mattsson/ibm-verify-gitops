@@ -29,10 +29,10 @@ data:
           key: secret:isvd-secret/server_key
 
     server:
-      replication:
-        admin:
-          dn: cn=replcred
-          pwd: secret:isvd-secret/replication_password
+      #replication:
+      #  admin:
+      #    dn: cn=replcred
+      #    pwd: secret:isvd-secret/replication_password
 
       suffixes:
         - dn: o=sample
