@@ -27,8 +27,7 @@ container:
   ssl_certificates:
     - name: isvd
       load_certificates:
-        - label: isvd
-          port: 9636
+        - port: 9636
           server: isvd-isvd-master-pvc
     - name: "lmi_trust_store"
       signer_certificates:
@@ -65,7 +64,7 @@ webseal:
       port: 9636
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-      cert_label: isvd
+      cert_label: server_cert
       key_file: isvd
   reverse_proxy:
      - name: "default"
