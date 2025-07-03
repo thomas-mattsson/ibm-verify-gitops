@@ -35,9 +35,9 @@ spec:
             - name: config-volume
               mountPath: /tmp/pki/openldap.pem
               subPath: openldap.pem
-            - name: sample-certificate-secret-volume
-              mountPath: /tmp/pki/tls.crt
-              subPath: tls.crt
+   #         - name: sample-certificate-secret-volume
+   #           mountPath: /tmp/pki/tls.crt
+   #           subPath: tls.crt
             - name: mapping-rules-volume
               mountPath: /tmp/config/mapping-rules
             - name: isvd-cert
@@ -54,6 +54,6 @@ spec:
         - name: isvd-cert
           secret:
             secretName: isvd-secret
-        - name: sample-certificate-secret-volume
-          secret:
-            secretName: sample-certificate-secret
+        #- name: sample-certificate-secret-volume
+        #  secret:
+        #    secretName: sample-certificate-secret
