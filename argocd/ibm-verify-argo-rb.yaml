@@ -2,6 +2,7 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: ibm-verify-argo-rb
+  namespace: ibm-verify
 subjects:
   - kind: ServiceAccount
     name: openshift-gitops-argocd-application-controller
