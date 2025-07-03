@@ -1,4 +1,4 @@
-# Config for remote ldap using IBM Directory Server
+# Config for local/embedded ldap using IBM Directory Server as federated LDAP
 container:
   k8s_deployments:
     namespace: "ibm-verify"
@@ -25,14 +25,10 @@ container:
       - name: "shared_volume"
         access: "w"
   ssl_certificates:
-    - name: isvd
-      load_certificates:
-        - name: isvd
-        - port: 9636
-        - server: isvd-isvd-master-pvc
     - name: "lmi_trust_store"
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
+      #- "/tmp/pki/openldap.pem"
     - name: "rt_profile_keys"
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
@@ -58,13 +54,44 @@ webseal:
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
     admin_cert_lifetime: 1460
     domain: "Default"
+    user_registry: local
     policy_server: local
-    user_registry: remote
-    ldap:
-      host: "isvd-isvd-master-pvc"
-      port: 9636
-      dn: !secret ibm-verify/ivia-secrets:ldap-binddn
-      dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
+    stanza_configuration:
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "host"
+      value: "isvd-proxy"
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "port"
+      value: "9636"
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "bind-dn"
+      value: "cn=manager,cn=ibmpolicies"
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "ssl-enabled"
+      value: "yes"
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "suffix"
+      value: "o=sample"
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "bind-pwd"
+      value: "passw0rd1"
+    - operation: "add"
+      resource: "ldap.conf"
+      stanza: "server:ISVD Proxy"
+      entry: "ssl-keyfile"
+      value: "isvd"
   reverse_proxy:
      - name: "default"
        # The host parameter will always be the hostname of the config container in a container deployment
@@ -74,8 +101,8 @@ webseal:
        https:
          enabled: "yes"
        ldap:
-         ssl_yn: "yes"
-         port: 9636
+         ssl_yn: "no"
+         port: 389
        domain: "Default"
        junctions:
          - junction_point: "/demo"
