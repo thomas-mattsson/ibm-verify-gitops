@@ -77,6 +77,8 @@ webseal:
        ldap:
          ssl_yn: "yes"
          port: 9636
+         cert_file: server_cert
+         key_file: isvd
        domain: "Default"
        junctions:
          - junction_point: "/demo"
