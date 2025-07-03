@@ -27,7 +27,7 @@ container:
     - name: "lmi_trust_store"
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
-      - "/tmp/pki/openldap.pem"
+      #- "/tmp/pki/openldap.pem"
     - name: "rt_profile_keys"
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
@@ -53,7 +53,7 @@ webseal:
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
     admin_cert_lifetime: 1460
     domain: "Default"
-    user_registry: local
+    user_registry: remote
     policy_server: local
     stanza_configuration:
     - operation: "add"
@@ -100,8 +100,8 @@ webseal:
        https:
          enabled: "yes"
        ldap:
-         ssl_yn: "no"
-         port: 9389
+         ssl_yn: "yes"
+         port: 9636
        domain: "Default"
        junctions:
          - junction_point: "/demo"
