@@ -7,7 +7,7 @@ changetype: add
 objectClass: inetOrgPerson 
 cn: manager
 sn: manager 
-userpassword: <password>
+userpassword: passw0rd1
 
 dn: globalGroupName=GlobalAdminGroup,cn=ibmpolicies 
 changetype: modify
