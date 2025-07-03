@@ -55,7 +55,7 @@ container:
 webseal:
   runtime:
     admin_user: sec_master
-    admin_password: !secret ibm-verify/ivia-secrets:sec-passwd    
+    admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
     admin_cert_lifetime: 1460
     domain: "Default"
     policy_server: local
@@ -65,6 +65,8 @@ webseal:
       port: 9636
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
+      cert_label: isvd
+      key_file: isvd
   reverse_proxy:
      - name: "default"
        # The host parameter will always be the hostname of the config container in a container deployment
