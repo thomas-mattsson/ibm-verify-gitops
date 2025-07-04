@@ -12,7 +12,7 @@ spec:
       serviceAccount: ivia-automated-config-job
       containers:
         - name: create-config
-          image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-f2a1735
+          image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-fa240fb
           command:
             - bash
             - -c
