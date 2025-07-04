@@ -29,6 +29,7 @@ container:
       load_certificates:
         - port: 9636
           server: isvd-isvd-master-pvc
+          label: isvd
     - name: "lmi_trust_store"
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
