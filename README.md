@@ -2,7 +2,6 @@
 
 GitOps for IBM Verify
 
-
 ## Clean-up LDAP entries
 
 Script to remove LDAP entries added by runtime registration
