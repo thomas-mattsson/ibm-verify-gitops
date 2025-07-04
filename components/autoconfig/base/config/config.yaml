@@ -65,7 +65,7 @@ webseal:
       port: 9636
       dn: !secret ibm-verify/ivia-secrets:ldap-binddn
       dn_password: !secret ibm-verify/ivia-secrets:ldap-passwd
-      cert_label: server_cert
+      cert_label: isvd
       key_file: isvd
   reverse_proxy:
      - name: "default"
@@ -78,7 +78,7 @@ webseal:
        ldap:
          ssl_yn: "yes"
          port: 9636
-         cert_file: server_cert
+         cert_file: isvd
          key_file: isvd
        domain: "Default"
        junctions:
