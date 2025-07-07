@@ -70,7 +70,7 @@ webseal:
   reverse_proxy:
      - name: "default"
        # The host parameter will always be the hostname of the config container in a container deployment
-       host: "ivia-config.ibm-verify.svc.cluster.local"
+       host: ivia-config
        http:
          enabled: "no"
        https:
