@@ -8,4 +8,8 @@ spec:
   name: ibm-security-verify-directory-operator
   source: certified-operators
   sourceNamespace: openshift-marketplace
-  
+  config:
+    resources:
+      limits:
+        cpu: 500m
+        memory: 1Gi
