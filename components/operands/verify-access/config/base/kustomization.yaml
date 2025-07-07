@@ -7,4 +7,3 @@ resources:
   - route.yaml
   - pvc.yaml
   - deployment.yaml
-  #- deployment-test.yaml
