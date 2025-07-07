@@ -21,10 +21,11 @@ idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.k
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=SecurityMaster,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policy,cn=Policies,principalName=sec_master,cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policy,cn=Policies,principalName=ivmgrd/master,cn=Users,secAuthority=Default
-idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policy,cn=Policies,principalName=default-webseald/ivia-config.ibm-verify.svc.cluster.local,cn=Users,secAuthority=Default
+idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policy,cn=Policies,principalName=default-webseald/ivia-config,cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policies,principalName=sec_master,cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policies,principalName=ivmgrd/master,cn=Users,secAuthority=Default
-idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policies,principalName=default-webseald/ivia-config.ibm-verify.svc.cluster.local,cn=Users,secAuthority=Default
+idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policies,principalName=default-webseald/ivia-config,cn=Users,secAuthority=Default
+idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Policies,principalName=test-webseald/ivia-config,cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=ivmgrd-servers,cn=SecurityGroups,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=ivmgrd-servers,cn=Groups,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=iv-admin,cn=SecurityGroups,secAuthority=Default
@@ -40,11 +41,10 @@ idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.k
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=su-admins,cn=SecurityGroups,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=su-admins,cn=Groups,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=ivmgrd/master,cn=SecurityDaemons,secAuthority=Default
-idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=default-webseald/ivia-config.ibm-verify.svc.cluster.local,cn=SecurityDaemons,secAuthority=Default
-idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=default-webseald/ivia-config.ibm-verify.svc.cluster.local,cn=SecurityDaemons,secAuthority=Default
+idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=default-webseald/ivia-config,cn=SecurityDaemons,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 principalName=ivmgrd/master,cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 principalName=sec_master,cn=Users,secAuthority=Default
-idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 principalName=default-webseald/ivia-config.ibm-verify.svc.cluster.local,cn=Users,secAuthority=Default
+idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 principalName=default-webseald/ivia-config,cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Users,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=Groups,secAuthority=Default
 idsldapdelete -D cn=root -w $1 -Z -K /home/idsldap/idsslapd-idsldap/etc/server.kdb -h 127.0.0.1 -p 9636 cn=SecurityGroups,secAuthority=Default

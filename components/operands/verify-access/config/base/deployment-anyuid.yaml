@@ -14,17 +14,12 @@ spec:
       labels:
         app: ivia-config
     spec:
-      #serviceAccountName: ivia-anyuid
+      serviceAccountName: ivia-anyuid
       securityContext:
         fsGroup: 0
         runAsNonRoot: true
-        #runAsUser: 1000820000
       containers:
         - name: ivia-config
-          command:
-            - /bin/bash
-            - '-c'
-            - echo "default:x:$(id -u):0:default:/:/sbin/nologin" >> "etc/passwd" && echo "3" > /etc/debug.level && /sbin/bootstrap.sh
           readinessProbe:
             exec:
               command:
