@@ -106,3 +106,8 @@ spec:
   #  env:
   #    - name: TEST_ENV
   #      value: TEST_ENV_VALUE
+  container:
+    resources:
+      limits:
+        cpu: "1"
+        memory: 2Gi
