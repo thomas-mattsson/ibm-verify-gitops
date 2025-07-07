@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
   - subscription.yaml
-  #- csv.yaml
