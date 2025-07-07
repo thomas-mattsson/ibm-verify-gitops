@@ -58,7 +58,7 @@ webseal:
     admin_password: !secret ibm-verify/ivia-secrets:sec-passwd
     admin_cert_lifetime: 1460
     domain: "Default"
-    policy_server: local
+    policy_server: ldap
     user_registry: ldap
     ldap:
       host: "isvd-isvd-master-pvc"
