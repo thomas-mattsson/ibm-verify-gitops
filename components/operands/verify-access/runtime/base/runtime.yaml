@@ -110,11 +110,3 @@ spec:
     volumeMounts:
       - mountPath: /var/shared
         name: ivia-config
-    env:
-      - name: CONFIG_SERVICE_USER_PWD
-        valueFrom:
-          secretKeyRef:
-            name: verify-access-operator
-            key: rw.pwd
-    #  - name: DEBUG
-    #    value: 'true'
