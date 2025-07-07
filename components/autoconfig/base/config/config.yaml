@@ -76,7 +76,7 @@ webseal:
        https:
          enabled: "yes"
        ldap:
-         ssl: "on"
+         ssl: "yes"
          port: 9636
          cert_file: isvd
          key_file: isvd
