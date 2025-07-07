@@ -14,8 +14,7 @@ spec:
       labels:
         app: ivia-config
     spec:
-      serviceAccountName: ivia-anyuid
-      #serviceAccountName: default
+      #serviceAccountName: ivia-anyuid
       securityContext:
         fsGroup: 0
         runAsNonRoot: true
@@ -25,8 +24,7 @@ spec:
           command:
             - /bin/bash
             - '-c'
-            #- echo "default:x:$(id -u):0:default:/:/sbin/nologin" >> "etc/passwd" && echo "3" > /etc/debug.level && /sbin/bootstrap.sh
-            - echo "3" > /etc/debug.level && /sbin/bootstrap.sh
+            - echo "default:x:$(id -u):0:default:/:/sbin/nologin" >> "etc/passwd" && echo "3" > /etc/debug.level && /sbin/bootstrap.sh
           readinessProbe:
             exec:
               command:
@@ -97,8 +95,7 @@ spec:
               readOnly: true
               mountPath: /tmp/verify-access-operator.crt
               subPath: tls.cert
-          #image: icr.io/ivia/ivia-config:11.0.0.0_IF1
-          image: icr.io/ivia/ivia-config:11.0.0.0
+          image: icr.io/ivia/ivia-config:11.0.0.0_IF1
       volumes:
         - name: ivia-config
           persistentVolumeClaim:
