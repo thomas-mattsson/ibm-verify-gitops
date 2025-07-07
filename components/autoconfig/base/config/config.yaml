@@ -85,5 +85,5 @@ webseal:
          - junction_point: "/demo"
            description: "demo junction point"
            junction_type: "tcp"
-           server_hostname: demo-app.ibm-verify.svc.cluster.local
+           server_hostname: demo-app
            server_port: 8080
