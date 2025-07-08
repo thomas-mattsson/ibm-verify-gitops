@@ -46,14 +46,14 @@ container:
       ssl: False
       db_name: "ivia"
   activation: #Activation codes
-    trial_license: !secret ibm-verify/ivia-secrets:trial_license
-    #webseal: !secret ibm-verify/ivia-secrets:base-code
-    #access_control: !secret ibm-verify/ivia-secrets:aac-code
-    #federation: !secret ibm-verify/ivia-secrets:fed-code
-  mapping_rules:
-  - type: "InfoMap"
-    files:
-    - /tmp/config/mapping-rules/
+    #trial_license: !secret ibm-verify/ivia-secrets:trial_license
+    webseal: !secret ibm-verify/ivia-secrets:base-code
+    access_control: !secret ibm-verify/ivia-secrets:aac-code
+    federation: !secret ibm-verify/ivia-secrets:fed-code
+  #mapping_rules:
+  #- type: "InfoMap"
+  #  files:
+  #  - /tmp/config/mapping-rules/
 webseal:
   runtime:
     admin_user: sec_master
