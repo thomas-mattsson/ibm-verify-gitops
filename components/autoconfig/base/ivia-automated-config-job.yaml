@@ -10,6 +10,17 @@ spec:
       name: ivia-automated-config-job
     spec:
       serviceAccount: ivia-automated-config-job
+      initContainers:
+      - name: wait-for-config-service
+        image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-3087a5e
+        args:
+        - /bin/sh
+        - -c
+        - >
+          set -x;
+          while [ $(curl -sw '%{http_code}' "https://ivia-config.ibm-verify.svc.cluster.local:9443" -o /dev/null) -ne 302 ]; do
+            sleep 15;
+          done
       containers:
         - name: create-config
           image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-3087a5e

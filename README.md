@@ -34,6 +34,10 @@ argo CD or Red Hat Enterprise Gitops needs to be installed in the cluster.
 
 ### Steps
 
+### Create the project
+
+
+
 #### Create secret with passwords and activation keys
 
 Literals that is not added to the git repo needs to be added in a secret. Replace the values marked with `<>` in the command below (here using Openshift CLI).
@@ -44,12 +48,12 @@ Literals that is not added to the git repo needs to be added in a secret. Replac
 oc create -n ibm-verify secret generic ivia-secrets \
  --from-literal=aac-code=<AAC activation code> \
  --from-literal=base-code=<base activation code> \
- --from-literal=ed-code=<federation activation code> \
+ --from-literal=fed-code=<federation activation code> \
  --from-literal=cfgsvc-passwd=<configuration service password> \
  --from-literal=ldap-binddn=<LDAP bind dn> \
  --from-literal=ldap-passwd=<LDAP password> \
  --from-literal=postgres-passwd=<postgres password> \
- --from-literal=sec-passewd=<sec-master password>
+ --from-literal=sec-passwd=<sec-master password>
 ```
 
 For Verify Directory also add this secret:
@@ -60,7 +64,7 @@ oc create -n ibm-verify secret generic isvd-secret \
  --from-literal=license-key=<license key> \
  --from-literal=replication_password=<replication password> \
  --from-file=server_cert=<server cert pem file location> \
- --from-file=server-key=<server private key pem file location>
+ --from-file=server_key=<server private key pem file location>
 ```
 
 #### Create the argo CD bootstrap application
