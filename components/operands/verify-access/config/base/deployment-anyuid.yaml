@@ -15,9 +15,6 @@ spec:
         app: ivia-config
     spec:
       serviceAccountName: ivia-anyuid
-      securityContext:
-        fsGroup: 0
-        runAsNonRoot: true
       containers:
         - name: ivia-config
           readinessProbe:
