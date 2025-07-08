@@ -46,9 +46,10 @@ container:
       ssl: False
       db_name: "ivia"
   activation: #Activation codes
-    webseal: !secret ibm-verify/ivia-secrets:base-code
-    access_control: !secret ibm-verify/ivia-secrets:aac-code
-    federation: !secret ibm-verify/ivia-secrets:fed-code
+    trial_license: !secret ibm-verify/ivia-secrets:trial_license
+    #webseal: !secret ibm-verify/ivia-secrets:base-code
+    #access_control: !secret ibm-verify/ivia-secrets:aac-code
+    #federation: !secret ibm-verify/ivia-secrets:fed-code
   mapping_rules:
   - type: "InfoMap"
     files:
