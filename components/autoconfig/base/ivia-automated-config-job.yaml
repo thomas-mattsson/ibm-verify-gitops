@@ -12,7 +12,7 @@ spec:
       serviceAccount: ivia-automated-config-job
       initContainers:
       - name: wait-for-config-service
-        image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-3087a5e
+        image: ghcr.io/nordic-mvp-gitops-repos/ibmvia-autoconf-image:latest
         args:
         - /bin/sh
         - -c
@@ -23,7 +23,7 @@ spec:
           done
       containers:
         - name: create-config
-          image: ghcr.io/thomas-mattsson/ibm-verify-gitops:sha-3087a5e
+          image: ghcr.io/nordic-mvp-gitops-repos/ibmvia-autoconf-image:sha-1c3f749:latest
           command:
             - bash
             - -c
