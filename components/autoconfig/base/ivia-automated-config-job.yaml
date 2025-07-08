@@ -18,7 +18,7 @@ spec:
         - -c
         - >
           set -x;
-          while [ $(curl -sw '%{http_code}' "https://ivia-config.ibm-verify.svc.cluster.local:9443" -o /dev/null) -ne 302 ]; do
+          while [ $(curl -k -sw '%{http_code}' "https://ivia-config.ibm-verify.svc.cluster.local:9443" -o /dev/null) -ne 302 ]; do
             sleep 15;
           done
       containers:
