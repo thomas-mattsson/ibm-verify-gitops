@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ivia-config-pvc
+  name: ivia-config-pvc-h2
 spec:
   accessModes:
     - ReadWriteOnce
