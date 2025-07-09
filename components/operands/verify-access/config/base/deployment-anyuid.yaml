@@ -113,5 +113,6 @@ spec:
         - name: bootstrap
           configMap:
             name: bootstrap
+            defaultMode: 0777
 
 
