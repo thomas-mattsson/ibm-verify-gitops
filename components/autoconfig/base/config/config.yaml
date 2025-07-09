@@ -37,14 +37,6 @@ container:
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
   cluster:
-    config_database:
-      host: ivia-runtime-db.ibm-verify.svc.cluster.local
-      port: 5432
-      type: postgresql
-      user: ivia
-      password: !secret ibm-verify/ivia-secrets:postgres-passwd
-      ssl: False
-      db_name: "isvaconfig"
     runtime_database:
       host: "ivia-runtime-db.ibm-verify.svc.cluster.local"
       port: 5432
