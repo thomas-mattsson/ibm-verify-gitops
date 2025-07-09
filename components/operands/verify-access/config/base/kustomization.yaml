@@ -5,6 +5,6 @@ resources:
   - service.yaml
   - route.yaml
   - pvc.yaml
-  - pvc2.yaml
+  - pvc-h2.yaml
   #- deployment-anyuid.yaml
   - deployment-restricted.yaml
