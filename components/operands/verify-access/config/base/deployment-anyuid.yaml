@@ -87,6 +87,9 @@ spec:
               readOnly: true
               mountPath: /tmp/verify-access-operator.crt
               subPath: tls.cert
+            - name: bootstrap
+              mountPath: /sbin/bootstrap.sh
+              subPath: bootstrap.sh
           image: icr.io/ivia/ivia-config:11.0.1.0
           resources:
             limits:
@@ -107,5 +110,8 @@ spec:
             items:
               - key: tls.cert
                 path: tls.cert
+        - name: bootstrap
+          configMap:
+            name: bootstrap
 
 
