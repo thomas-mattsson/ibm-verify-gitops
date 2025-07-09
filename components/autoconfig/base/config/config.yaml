@@ -5,7 +5,7 @@ container:
     runtime: 
       - "ivia-runtime"
     webseal:
-      - "via-wrpi"
+      - "ivia-wrp"
   admin_cfg:
     session_timeout: 720
   account_management:

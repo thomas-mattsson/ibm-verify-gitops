@@ -23,6 +23,7 @@ spec:
           done
       containers:
         - name: create-config
+          imagePullPolicy: Always
           image: ghcr.io/nordic-mvp-gitops-repos/ibmvia-autoconf-image:latest
           command:
             - bash
