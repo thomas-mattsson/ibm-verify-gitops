@@ -89,7 +89,7 @@ spec:
               readOnly: true
               mountPath: /tmp/verify-access-operator.crt
               subPath: tls.cert
-          image: icr.io/ivia/ivia-config:11.0.1.0
+          image: icr.io/ivia/ivia-config:11.0.0.0
           resources:
             limits:
               cpu: "1"
