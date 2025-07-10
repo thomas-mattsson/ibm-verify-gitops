@@ -8,7 +8,7 @@ metadata:
 spec:
   # The name of the image which will be used in the deployment.
   # https://docs.verify.ibm.com/ibm-security-verify-access/docs/containers#web-reverse-proxy
-  image: "icr.io/ivia/ivia-wrp:11.0.1.0"
+  image: "icr.io/ivia/ivia-wrp:11.0.0.0"
 
   # The number of pods which will be started for the deployment.
   replicas: 1
