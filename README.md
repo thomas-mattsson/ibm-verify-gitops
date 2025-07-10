@@ -20,23 +20,22 @@ There are several options provided in this repo:
 
 See [config directory](components/autoconfig/base/config/config.yaml) for different examples. Current configuration is using IBM Verify Directory.
 
-## Running in restricted-v2 SCC
-
-In Openshift, `restricted-v2` SCC is the default security context constraint and also required in may environements. The configuration service is currently not supporting this mode (see [this idea](https://ibmsecurity.ideas.ibm.com/ideas/ISAM-I-1108) for details). An unsupported workaround is added here by changing from `deployment-anyuid.yaml` to `deployment-restricted.yaml` in [kustomize.yaml for the config service](components/operands/verify-access/config/base/kustomization.yaml).
-
-Note that local user registry (embedded LDAP) is not possible to use in that case and a remote LDAP needs to be used. And of the two remote LDAP options provided in this repo, only verify directory can run in `restricted-v2` mode.
-
 ## Installation
 
 ### Prerequisites
 
 argo CD or Red Hat Enterprise Gitops needs to be installed in the cluster.
+Installation will be done in the `ibm-verify` namespace. There are several references to that name in the files that would need to be updated in case another namespace should be used.
 
 ### Steps
 
 ### Create the project
 
+Create the project so the secrets in the next step can be created. For Openshift do
 
+```bash
+oc new-project ibm-verify
+```
 
 #### Create secret with passwords and activation keys
 
