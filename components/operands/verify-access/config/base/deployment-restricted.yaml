@@ -86,8 +86,6 @@ spec:
           volumeMounts:
             - name: ivia-config
               mountPath: /var/shared
-            - name: ivia-config-h2
-              mountPath: /var/h2  
             - name: verify-access-operator
               readOnly: true
               mountPath: /tmp/verify-access-operator.crt
@@ -106,9 +104,6 @@ spec:
         - name: ivia-config
           persistentVolumeClaim:
             claimName: ivia-config-pvc
-        - name: ivia-config-h2
-          persistentVolumeClaim:
-            claimName: ivia-config-pvc-h2
         - name: verify-access-operator
           secret:
             secretName: verify-access-operator
