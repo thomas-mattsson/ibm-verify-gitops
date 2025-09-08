@@ -11,7 +11,7 @@ spec:
   source:
     path: ./argocd
     targetRevision: HEAD
-    repoURL: https://github.com/thomas-mattsson/ibm-verify-gitops.git
+    repoURL: https://github.com/Nordic-MVP-GitOps-Repos/ibm-verify-gitops.git
   syncPolicy:
     automated:
       prune: true
