@@ -7,7 +7,7 @@ spec:
   - list:
       elements:
         - name: verify-access
-        - name: verify-directory
+        #- name: verify-directory
   template:
     metadata:
       name: '{{name}}-operator'
