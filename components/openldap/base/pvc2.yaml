@@ -5,7 +5,7 @@ metadata:
   labels:
     app: openldap
 spec:
-  storageClassName: ocs-storagecluster-cephfs
+  storageClassName: ocs-external-storagecluster-cephfs
   accessModes:
   - ReadWriteOnce
   resources:
