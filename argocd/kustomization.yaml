@@ -13,7 +13,7 @@ resources:
   - operators/all-operators.yaml
   - operands/all-operands.yaml
 
-  - autoconfig.yaml
+  #- autoconfig.yaml
   - postgresql.yaml
   #- openldap.yaml
   - verify-directory.yaml
