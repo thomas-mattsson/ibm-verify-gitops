@@ -32,9 +32,14 @@ container:
     - name: "rt_profile_keys"
       signer_certificates:
       - "/tmp/pki/postgresql.pem"
-    - name: "isvd"
-      signer_certificates:
-      - "/tmp/pki/server_cert/server_cert" 
+    - name: isvd
+      load_certificates:
+        - port: 9636
+          server: isvd-proxy
+          label: isvd
+    #- name: "isvd"
+    #  signer_certificates:
+    #  - "/tmp/pki/server_cert/server_cert" 
   cluster:
     runtime_database:
       host: "ivia-runtime-db.ibm-verify.svc.cluster.local"
