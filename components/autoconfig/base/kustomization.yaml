@@ -4,7 +4,7 @@ kind: Kustomization
 configMapGenerator:
   - name: automated-config
     files:
-      - config/config.yaml
+      - config/config-federation.yaml
       - config/openldap.pem
       - config/postgresql.pem
 
