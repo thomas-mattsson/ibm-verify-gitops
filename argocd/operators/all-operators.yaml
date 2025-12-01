@@ -8,6 +8,7 @@ spec:
       elements:
         - name: verify-access
         - name: verify-directory
+        - name: vault
   template:
     metadata:
       name: '{{name}}-operator'
